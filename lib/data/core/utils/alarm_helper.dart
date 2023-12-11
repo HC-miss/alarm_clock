@@ -49,7 +49,7 @@ class AlarmHelper {
   Future<void> insertAlarm(AlarmInfo alarmInfo) async {
     var db = await database;
     var result = await db.insert(tableAlarm, alarmInfo.toMap());
-    Log.i('result : $result');
+    Log.i('insert result : $result');
   }
 
   Future<List<AlarmInfo>> getAlarms() async {

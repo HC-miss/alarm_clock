@@ -19,7 +19,7 @@ class ClockPage extends StatelessWidget {
     if (!timezoneString.startsWith('-')) offsetSign = '+';
 
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 32, vertical: 64),
+      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 64),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
