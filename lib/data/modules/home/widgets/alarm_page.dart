@@ -277,6 +277,7 @@ class _AlarmPageState extends State<AlarmPage> {
     );
 
     _alarmHelper.insertAlarm(alarmInfo);
+
     if (scheduleAlarmDateTime != null) {
       scheduleAlarm(scheduleAlarmDateTime, alarmInfo, isRepeating: isRepeating);
     }
@@ -312,7 +313,7 @@ class _AlarmPageState extends State<AlarmPage> {
     );
 
     await flutterLocalNotificationsPlugin.zonedSchedule(
-      0,
+      alarmInfo.id!,
       'Office',
       alarmInfo.title,
       tz.TZDateTime.from(scheduledNotificationDateTime, tz.local),
@@ -327,6 +328,7 @@ class _AlarmPageState extends State<AlarmPage> {
   void deleteAlarm(int? id) {
     _alarmHelper.delete(id);
     // unsubscribe for notification
+    flutterLocalNotificationsPlugin.cancel(id!);
     loadAlarms();
   }
 

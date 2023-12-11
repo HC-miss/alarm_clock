@@ -46,21 +46,21 @@ class AlarmHelper {
     return database;
   }
 
-  Future<void> insertAlarm(AlarmInfo alarmInfo) async {
+  Future<AlarmInfo> insertAlarm(AlarmInfo alarmInfo) async {
     var db = await database;
-    var result = await db.insert(tableAlarm, alarmInfo.toMap());
-    Log.i('insert result : $result');
+    alarmInfo.id = await db.insert(tableAlarm, alarmInfo.toMap());
+    return alarmInfo;
   }
 
   Future<List<AlarmInfo>> getAlarms() async {
-    List<AlarmInfo> _alarms = [];
+    List<AlarmInfo> alarms = [];
     var db = await database;
     var result = await db.query(tableAlarm);
     for (var element in result) {
       var alarmInfo = AlarmInfo.fromMap(element);
-      _alarms.add(alarmInfo);
+      alarms.add(alarmInfo);
     }
-    return _alarms;
+    return alarms;
   }
 
   Future<int> delete(int? id) async {
