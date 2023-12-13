@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:alarm_clock/data/core/values/app_colors.dart';
+import 'package:alarm_clock/core/values/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 

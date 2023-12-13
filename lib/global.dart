@@ -1,6 +1,6 @@
 // import 'package:feather_jhomlala/core/dependency_injection.dart';
-import 'package:alarm_clock/data/core/utils/local_notifications.dart';
-import 'package:alarm_clock/data/core/utils/timezone.dart';
+import 'package:alarm_clock/core/utils/local_notifications.dart';
+import 'package:alarm_clock/core/utils/timezone.dart';
 import 'package:flutter/material.dart';
 
 /// 全局静态数据

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 
-import 'package:alarm_clock/data/core/values/app_colors.dart';
+import 'package:alarm_clock/core/values/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class ClockView extends StatefulWidget {
@@ -83,7 +83,8 @@ class ClockPainter extends CustomPainter {
 
     // 分刷子
     var minHandBrush = Paint()
-      ..shader = RadialGradient(colors: [AppColors.minHandStatColor, AppColors.minHandEndColor])
+      ..shader = RadialGradient(
+              colors: [AppColors.minHandStatColor, AppColors.minHandEndColor])
           .createShader(Rect.fromCircle(center: center, radius: radius))
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round
@@ -112,8 +113,14 @@ class ClockPainter extends CustomPainter {
     canvas.drawCircle(center, radius * 0.75, fillBrush);
     canvas.drawCircle(center, radius * 0.75, outlineBrush);
 
-    var hourHandX = centerX + radius * 0.4 * cos((dateTime.hour * 30 + dateTime.minute * 0.5) * pi / 180);
-    var hourHandY = centerY + radius * 0.4 * sin((dateTime.hour * 30 + dateTime.minute * 0.5) * pi / 180);
+    var hourHandX = centerX +
+        radius *
+            0.4 *
+            cos((dateTime.hour * 30 + dateTime.minute * 0.5) * pi / 180);
+    var hourHandY = centerY +
+        radius *
+            0.4 *
+            sin((dateTime.hour * 30 + dateTime.minute * 0.5) * pi / 180);
     canvas.drawLine(center, Offset(hourHandX, hourHandY), hourHandBrush);
 
     var minHandX = centerX + radius * 0.6 * cos(dateTime.minute * 6 * pi / 180);

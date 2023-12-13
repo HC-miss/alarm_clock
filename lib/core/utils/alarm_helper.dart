@@ -1,4 +1,3 @@
-import 'package:alarm_clock/data/core/utils/app_logger.dart';
 import 'package:alarm_clock/data/models/alarm_info.dart';
 import 'package:sqflite/sqflite.dart';
 

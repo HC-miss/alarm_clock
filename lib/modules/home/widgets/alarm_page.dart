@@ -1,6 +1,6 @@
-import 'package:alarm_clock/data/core/utils/alarm_helper.dart';
-import 'package:alarm_clock/data/core/utils/local_notifications.dart';
-import 'package:alarm_clock/data/core/values/app_colors.dart';
+import 'package:alarm_clock/core/utils/alarm_helper.dart';
+import 'package:alarm_clock/core/utils/local_notifications.dart';
+import 'package:alarm_clock/core/values/app_colors.dart';
 import 'package:alarm_clock/data/models/alarm_info.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';

@@ -1,6 +1,6 @@
-import 'package:alarm_clock/data/core/theme/app_theme.dart';
-import 'package:alarm_clock/data/routes/app_pages.dart';
+import 'package:alarm_clock/core/theme/app_theme.dart';
 import 'package:alarm_clock/global.dart';
+import 'package:alarm_clock/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';

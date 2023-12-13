@@ -1,4 +1,4 @@
-import 'package:alarm_clock/data/core/values/app_colors.dart';
+import 'package:alarm_clock/core/values/app_colors.dart';
 import 'package:alarm_clock/data/enums/menu_type.dart';
 import 'package:alarm_clock/data/models/alarm_info.dart';
 import 'package:alarm_clock/data/models/menu_info.dart';

@@ -1,5 +1,5 @@
-import 'package:alarm_clock/data/modules/home/home_binding.dart';
-import 'package:alarm_clock/data/modules/home/home_page.dart';
+import 'package:alarm_clock/modules/home/home_binding.dart';
+import 'package:alarm_clock/modules/home/home_page.dart';
 import 'package:get/get.dart';
 
 part 'app_routes.dart';
